@@ -1,0 +1,32 @@
+# cmake build folder
+cmake-build-*/
+
+# IDE env folder
+.idea/
+
+# executables
+*.exe
+*.dll
+*.dylib
+*.so
+
+# debug symbols
+*.pdb
+*.obj
+
+# test files
+tests/
+*.obj
+*.fbx
+*.dae
+*.stl
+*.mview
+*.jpg
+*.dat
+*.bin
+*.mesh
+
+# logs
+*.log
+*.snapshot
+*.debug
