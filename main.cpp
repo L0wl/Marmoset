@@ -1,10 +1,22 @@
 #include <iostream>
+
+#include "cmd/CommandlineParser.h"
 #include "core/Archive.h"
 
 int main(int argc, char* argv[]) {
-    std::string filepath = argv[1];
-    std::string output = argv[2];
-    bool logging = argv[3];
-    Archive* Object = new Archive(filepath, logging);
-    return 0;
+    CommandlineParser parser;
+    parser.setRequiredArguments({"archive", "output"});
+    parser.setShortArgumentConvensions({{"-a", "--archive"}, {"-o", "--output"}});
+    try {
+        parser.parse(argc, argv);
+        std::string filepath = parser.getArgument("archive");
+        std::string outpath = parser.getArgument("output");
+
+        // Archive* Object = new Archive(filepath, logging);
+        // return 0;
+
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+        return 1;
+    }
 }

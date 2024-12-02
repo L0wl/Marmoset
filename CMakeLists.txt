@@ -9,4 +9,6 @@ add_executable(Marmoset main.cpp
         core/Decompressor.cpp
         core/Decompressor.h
         core/ByteStream.cpp
-        core/ByteStream.h)
+        core/ByteStream.h
+        cmd/CommandlineParser.cpp
+        cmd/CommandlineParser.h)
