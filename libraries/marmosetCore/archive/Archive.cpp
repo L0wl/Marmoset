@@ -1,7 +1,7 @@
 #include "Archive.h"
 #include <fstream>
 #include "../bytestream/ByteStream.h"
-#include "decompressor/Decompressor.h"
+#include "../limpelziv/Decompressor.h"
 
 Archive::Archive(const std::string& filepath) {
     if (!filepath.empty()) {
