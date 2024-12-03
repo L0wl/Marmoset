@@ -7,7 +7,6 @@
 #include <vector>
 
 class CommandlineParser {
-private:
     std::map<std::string, std::string> arguments;
     std::vector<std::string> requiredArguments;
     std::map<std::string, std::string> shortToLongArguments;

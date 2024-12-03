@@ -25,6 +25,8 @@ void CommandlineParser::parse(int argc, char* argv[]) {
             i++;
         }
     }
+
+    validateArguments();
 }
 
 bool CommandlineParser::isValid() const {
@@ -32,13 +34,13 @@ bool CommandlineParser::isValid() const {
 }
 
 void CommandlineParser::validateArguments() {
-    if (parserValid) {
-        for (const auto& requiredArg: requiredArguments) {
-            if (arguments.find(requiredArg) == arguments.end()) {
-                throw std::runtime_error("Required argument not passed: " + requiredArg);
-            }
+    for (const auto& requiredArg : requiredArguments) {
+        if (arguments.find(requiredArg) == arguments.end()) {
+            parserValid = false;
+            return;
         }
     }
+    parserValid = true;
 }
 
 std::string CommandlineParser::getArgument(const std::string& key) const {
