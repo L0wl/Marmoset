@@ -25,6 +25,8 @@ int main(int argc, char* argv[]) {
             std::cout << "\nAll arguments passed!\n";
             parser.printAllArguments();
             Archive* archive = new Archive(parser.getArgument("archive"));
+            std::cout << "Completed!";
+            // archive->getFile("mesh0.dat");
             return 0;
             /// TODO: serialize to output
             std::string outpath = parser.getArgument("output");
