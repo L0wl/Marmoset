@@ -4,11 +4,11 @@ project(Marmoset)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(Marmoset main.cpp
-        core/Archive.cpp
-        core/Archive.h
-        core/Decompressor.cpp
-        core/Decompressor.h
-        core/ByteStream.cpp
-        core/ByteStream.h
-        cmd/CommandlineParser.cpp
-        cmd/CommandlineParser.h)
+        core/archive/Archive.cpp
+        core/archive/Archive.h
+        core/archive/decompressor/Decompressor.cpp
+        core/archive/decompressor/Decompressor.h
+        core/bytestream/ByteStream.cpp
+        core/bytestream/ByteStream.h
+        core/cmd/CommandlineParser.cpp
+        core/cmd/CommandlineParser.h)

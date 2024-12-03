@@ -20,13 +20,12 @@ struct ArchiveFile {
 
 class Archive {
 public:
-    explicit Archive(const std::string& filepath, bool enableLogging = false);
+    explicit Archive(const std::string& filepath);
     std::shared_ptr<ArchiveFile> getFile(const std::string& name) const;
+    int getNumFiles() const;
 
 private:
     bool loadFromFile(const std::string& filepath);
-
-    bool loggingEnabled;
     std::unordered_map<std::string, std::shared_ptr<ArchiveFile>> files;
 };
 

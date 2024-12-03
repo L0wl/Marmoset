@@ -17,7 +17,6 @@ public:
     void readBytes(std::vector<uint8_t>& buffer, size_t size);
     void skip(size_t bytes);
 
-
 private:
     std::vector<uint8_t> data;
     size_t position;
