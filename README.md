@@ -10,6 +10,8 @@ Open that link in the new tab and downloading of mview file already running.
 
 Buffers now can be vizualized only through manual WebGL mapping, but soon it's come possible to be exported into open 3d formats like `Collada`, `Blender`
 
+Common mesh buffers are named as `mesh*.dat`
+
 ## TODO
 - [x] .dat file support
 - [x] .mview partially support
